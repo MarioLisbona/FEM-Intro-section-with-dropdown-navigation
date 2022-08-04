@@ -1,6 +1,9 @@
 /* =================ROOT========================*/
 :root {
-
+    /* Neutral */
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
 }
 /* =================/ROOT========================*/
 
@@ -11,7 +14,11 @@
     margin: 0;
     padding: 0;
     /* outline: 1px solid black; */
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    /* font wieights 500 and 700 */
 }
+
 /* =================/RESETS========================*/
 
 /* Frontend Mentor Footer */
