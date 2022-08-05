@@ -76,7 +76,6 @@ body {
 }
 
 .dropdown-content {
-    /* display: none; */
     position: absolute;
     background-color: var(--almost-white);
     width: auto;
@@ -212,6 +211,10 @@ body {
 
 .show-dropdown {
     display: block;
+}
+
+.hide-dropdown {
+    display: none;
 }
 
 button:hover,
