@@ -218,7 +218,8 @@ body {
 }
 
 button:hover,
-.btn:hover {
+.btn:hover,
+.link-title:hover {
     color: var(--almost-black);
 }
 
@@ -231,6 +232,8 @@ button:hover,
     outline: 1px solid var(--almost-black);
     background-color: var(--almost-white);
 }
+
+
 /* Frontend Mentor Footer */
 .attribution {
     color: var(--almost-black);
