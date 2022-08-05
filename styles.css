@@ -76,7 +76,7 @@ body {
 }
 
 .dropdown-content {
-    display: none;
+    /* display: none; */
     position: absolute;
     background-color: var(--almost-white);
     width: auto;
@@ -124,7 +124,8 @@ body {
 .login,
 .btn-dropdown,
 .btn-container,
-.logo-container {
+.logo-container,
+.learn-more {
     outline: none;
     border: none;
     background-color: var(--almost-white);
