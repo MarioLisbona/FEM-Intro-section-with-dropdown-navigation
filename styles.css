@@ -88,11 +88,11 @@ body {
 
 .company {
     transform: translateX(-10%);
-    padding: .1em 1em;
+    padding: .5em 1em;
 }
 
-.company > a {
-    margin: .5em;
+.company-link {
+    padding: .5em .5em .5em 0;
 }
 
 .dropdown-link-container {
@@ -104,8 +104,8 @@ body {
 .icon,
 .link-title {
     padding: .5em;
-
 }
+
 
 .login-container {
     display: flex;
