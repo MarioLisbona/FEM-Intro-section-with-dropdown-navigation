@@ -81,11 +81,17 @@ body {
 .login-container > button {
     margin: 1em;
     background-color: var(--almost-white);
+    cursor: pointer;
+
 }
 
-.login {
+.login,
+.btn-dropdown,
+.logo-container {
     outline: none;
     border: none;
+    background-color: var(--almost-white);
+    cursor: pointer;
 }
 
 .register {
