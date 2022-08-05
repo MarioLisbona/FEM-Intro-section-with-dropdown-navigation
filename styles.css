@@ -87,11 +87,22 @@ body {
 
 .login,
 .btn-dropdown,
+.btn-container,
 .logo-container {
     outline: none;
     border: none;
     background-color: var(--almost-white);
     cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-dropdown {
+    margin-right: .5em;
 }
 
 .register {
