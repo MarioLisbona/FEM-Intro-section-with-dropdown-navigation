@@ -212,6 +212,11 @@ body {
 .show-dropdown {
     display: block;
 }
+
+button:hover,
+.btn:hover {
+    color: var(--almost-black);
+}
 /* Frontend Mentor Footer */
 .attribution {
     color: var(--almost-black);
