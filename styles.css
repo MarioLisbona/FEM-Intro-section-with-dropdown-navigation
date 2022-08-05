@@ -85,6 +85,20 @@ body {
     z-index: 1;
     padding: 1em;
     border-radius: .5em;
+    transform: translateX(-40%);
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(-10%);
+    padding: 1em;
+}
+
+.company > a {
+    margin: .5em;
 }
 
 .dropdown-link-container {
@@ -110,7 +124,6 @@ body {
     margin: 1em;
     background-color: var(--almost-white);
     cursor: pointer;
-
 }
 
 .login,
