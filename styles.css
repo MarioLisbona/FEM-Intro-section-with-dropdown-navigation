@@ -217,6 +217,16 @@ button:hover,
 .btn:hover {
     color: var(--almost-black);
 }
+
+.register:hover {
+    border-color: var(--almost-black);
+}
+
+.learn-more:hover {
+    color: var(--almost-black);
+    outline: 1px solid var(--almost-black);
+    background-color: var(--almost-white);
+}
 /* Frontend Mentor Footer */
 .attribution {
     color: var(--almost-black);
