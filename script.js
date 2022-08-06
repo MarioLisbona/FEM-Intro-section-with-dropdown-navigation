@@ -5,16 +5,6 @@ const featuresBtn = document.querySelector('.btn-dropdown-features')
 const featuresIcon = document.querySelector('.features-icon')
 const featuresDropDown = document.querySelector('.features')
 
-// companyBtn.addEventListener('click', function(e) {
-
-//     dropDownAction(e ,companyDropDown)
-// })
-
-// featuresBtn.addEventListener('click', function(e) {
-
-//     dropDownAction(e ,featuresDropDown)
-// })
-
 companyIcon.addEventListener('click', function(e) {
 
     dropDownAction(e ,companyDropDown)
@@ -32,9 +22,6 @@ window.onclick = function(e) {
     popUpAction(e, featuresDropDown, featuresIcon, '.features-icon')
 
 }
-
-
-
 
 function dropDownAction(event, menu) {
 
@@ -68,3 +55,5 @@ function popUpAction(event, dropdown, icon, className) {
         }
     }
 }
+
+
