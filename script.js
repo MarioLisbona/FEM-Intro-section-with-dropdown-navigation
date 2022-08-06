@@ -5,6 +5,34 @@ const featuresBtn = document.querySelector('.btn-dropdown-features')
 const featuresIcon = document.querySelector('.features-icon')
 const featuresDropDown = document.querySelector('.features')
 
+featuresBtn.addEventListener('click', () => {
+
+    if (featuresDropDown.classList.contains('hide-dropdown')) {
+        featuresDropDown.classList.remove('hide-dropdown')
+    } else if (!featuresDropDown.classList.contains('hide-dropdown')) {
+        featuresDropDown.classList.add('hide-dropdown')
+    }
+
+    if (featuresIcon.classList.contains('fa-angle-down')) {
+        featuresIcon.classList.remove('fa-angle-down')
+    }
+
+    // if (featuresIcon.classList.contains('fa-angle-down')) {
+    //     featuresIcon.classList.remove('fa-angle-down');
+    //     featuresIcon.classList.add('fa-angle-up');
+    // } else if (!featuresIcon.classList.contains('fa-angle-down')) {
+    //     featuresIcon.classList.add('fa-angle-down');
+    //     featuresIcon.classList.remove('fa-angle-up');
+    // }
+
+})
+
+companyBtn.addEventListener('click', function(e) {
+    console.log(companyBtn.textContent)
+    console.log(e.target)
+
+})
+
 companyIcon.addEventListener('click', function(e) {
 
     dropDownAction(e ,companyDropDown)
