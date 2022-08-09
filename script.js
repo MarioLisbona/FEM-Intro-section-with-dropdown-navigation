@@ -15,21 +15,29 @@ featuresBtn.addEventListener('click', () => {
 
     if (featuresIcon.classList.contains('fa-angle-down')) {
         featuresIcon.classList.remove('fa-angle-down')
+        featuresIcon.classList.add('fa-angle-up')
+    } else if (!featuresIcon.classList.contains('fa-angle-down')) {
+        featuresIcon.classList.remove('fa-angle-up')
+        featuresIcon.classList.add('fa-angle-down')
     }
-
-    // if (featuresIcon.classList.contains('fa-angle-down')) {
-    //     featuresIcon.classList.remove('fa-angle-down');
-    //     featuresIcon.classList.add('fa-angle-up');
-    // } else if (!featuresIcon.classList.contains('fa-angle-down')) {
-    //     featuresIcon.classList.add('fa-angle-down');
-    //     featuresIcon.classList.remove('fa-angle-up');
-    // }
 
 })
 
-companyBtn.addEventListener('click', function(e) {
-    console.log(companyBtn.textContent)
-    console.log(e.target)
+companyBtn.addEventListener('click', () => {
+
+    if (companyDropDown.classList.contains('hide-dropdown')) {
+        companyDropDown.classList.remove('hide-dropdown')
+    } else if (!companyDropDown.classList.contains('hide-dropdown')) {
+        companyDropDown.classList.add('hide-dropdown')
+    }
+
+    if (companyIcon.classList.contains('fa-angle-down')) {
+        companyIcon.classList.remove('fa-angle-down')
+        companyIcon.classList.add('fa-angle-up')
+    } else if (!companyIcon.classList.contains('fa-angle-down')) {
+        companyIcon.classList.remove('fa-angle-up')
+        companyIcon.classList.add('fa-angle-down')
+    }
 
 })
 
@@ -46,9 +54,45 @@ featuresIcon.addEventListener('click', function(e) {
 
 window.onclick = function(e) {
 
-    popUpAction(e, companyDropDown, companyIcon, '.company-icon')
-    popUpAction(e, featuresDropDown, featuresIcon, '.features-icon')
+    if(!e.target.matches('.btn-dropdown-features')) {
+        if (!featuresDropDown.classList.contains('hide-dropdown')) {
+            featuresDropDown.classList.add('hide-dropdown')
+        }
 
+        if (featuresIcon.classList.contains('fa-angle-up')) {
+            featuresIcon.classList.remove('fa-angle-up')
+            featuresIcon.classList.add('fa-angle-down')
+        }
+    }
+
+    if(!e.target.matches('.btn-dropdown-company')) {
+        if (!companyDropDown.classList.contains('hide-dropdown')) {
+            companyDropDown.classList.add('hide-dropdown')
+        }
+
+        if (companyIcon.classList.contains('fa-angle-up')) {
+            companyIcon.classList.remove('fa-angle-up')
+            companyIcon.classList.add('fa-angle-down')
+        }
+    }
+}
+
+    // popUpAction(e, featuresDropDown, featuresIcon, '.btn-dropdown-features')
+    // popUpAction(e, companyDropDown, companyIcon, '.btn-dropdown-company')
+
+function popUpAction(event, dropdown, icon, className) {
+    if (!event.target.matches(className)) {
+
+        if (dropdown.classList.contains('show-dropdown')) {
+            dropdown.classList.remove('show-dropdown')
+            dropdown.classList.add('hide-dropdown')
+        }
+
+        if (icon.classList.contains('fa-angle-up')) {
+            icon.classList.remove('fa-angle-up')
+            icon.classList.add('fa-angle-down')
+        }
+    }
 }
 
 function dropDownAction(event, menu) {
@@ -66,21 +110,6 @@ function dropDownAction(event, menu) {
     } else if (menu.matches('.hide-dropdown')) {
         menu.classList.remove('hide-dropdown')
         menu.classList.add('show-dropdown')
-    }
-}
-
-function popUpAction(event, dropdown, icon, className) {
-    if (!event.target.matches(className)) {
-
-        if (dropdown.classList.contains('show-dropdown')) {
-            dropdown.classList.remove('show-dropdown')
-            dropdown.classList.add('hide-dropdown')
-        }
-
-        if (icon.classList.contains('fa-angle-up')) {
-            icon.classList.remove('fa-angle-up')
-            icon.classList.add('fa-angle-down')
-        }
     }
 }
 
