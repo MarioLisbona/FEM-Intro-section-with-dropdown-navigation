@@ -234,6 +234,11 @@ button:hover,
     background-color: var(--almost-white);
 }
 
+.features-icon,
+.company-icon {
+    cursor: default
+}
+
 
 /* Frontend Mentor Footer */
 .attribution {
