@@ -209,10 +209,6 @@ body {
     width: 75%;
 }
 
-.show-dropdown {
-    display: block;
-}
-
 .hide-dropdown {
     display: none;
 }
