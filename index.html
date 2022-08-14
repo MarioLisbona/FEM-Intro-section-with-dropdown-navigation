@@ -92,7 +92,13 @@
             <div class="clients client-4"><img src="./images/client-maker.svg" alt="Client Logo - Maker"></div>
           </div>
         </div>
-        <div class="hero-img-container"><img src="./images/image-hero-desktop.png" alt=""></div>
+        <div class="hero-img-container">
+          <picture>
+            <source media="(min-width: 375px)" srcset="images/image-hero-desktop.png">
+            <source media="(max-width: 375px)" srcset="images/image-hero-mobile.png">
+          </picture>
+          <img src="./images/image-hero-desktop.png" alt="">
+        </div>
       </div>
     </div>
   </main>
