@@ -1,3 +1,4 @@
+// variables for html elements
 const companyBtn = document.querySelector('.btn-dropdown-company')
 const companyIcon = document.querySelector('.company-icon')
 const companyDropDown = document.querySelector('.company')
@@ -5,55 +6,66 @@ const featuresBtn = document.querySelector('.btn-dropdown-features')
 const featuresIcon = document.querySelector('.features-icon')
 const featuresDropDown = document.querySelector('.features')
 
-companyIcon.addEventListener('click', function(e) {
 
-    dropDownAction(e ,companyDropDown)
+//event listeners on the features and company buttons to activate the dropdown menu
+featuresBtn.addEventListener('click', () => {
+
+    menuReveal(featuresDropDown, featuresIcon)
+
 })
 
-featuresIcon.addEventListener('click', function(e) {
+companyBtn.addEventListener('click', () => {
 
-    dropDownAction(e ,featuresDropDown)
+    menuReveal(companyDropDown, companyIcon)
+
 })
 
 
+//listening for a click anywhere on the window to remove a dropdown menu if it is open
 window.onclick = function(e) {
 
-    popUpAction(e, companyDropDown, companyIcon, '.company-icon')
-    popUpAction(e, featuresDropDown, featuresIcon, '.features-icon')
+
+    if(!e.target.matches('.btn-dropdown-features')) {
+
+        menuHide(featuresDropDown, featuresIcon)
+
+    }
+
+    if(!e.target.matches('.btn-dropdown-company')) {
+
+        menuHide(companyDropDown, companyIcon)
+
+    }
 
 }
 
-function dropDownAction(event, menu) {
+// reaveals the menu if the hide-dropdown class is present and changes the arrow from down to up
+function menuReveal(menu, icon) {
 
-    if (event.target.matches('.fa-angle-down')) {
-        event.target.classList.remove('fa-angle-down');
-        event.target.classList.add('fa-angle-up');
-    } else if (!event.target.matches('.fa-angle-down')) {
-        event.target.classList.add('fa-angle-down');
-        event.target.classList.remove('fa-angle-up');
-    }
-
-    if (!menu.matches('.hide-dropdown')) {
-        menu.classList.add('hide-dropdown')
-    } else if (menu.matches('.hide-dropdown')) {
+    if (menu.classList.contains('hide-dropdown')) {
         menu.classList.remove('hide-dropdown')
-        menu.classList.add('show-dropdown')
+    } else if (!menu.classList.contains('hide-dropdown')) {
+        menu.classList.add('hide-dropdown')
+    }
+
+    if (icon.classList.contains('fa-angle-down')) {
+        icon.classList.remove('fa-angle-down')
+        icon.classList.add('fa-angle-up')
+    } else if (!icon.classList.contains('fa-angle-down')) {
+        icon.classList.remove('fa-angle-up')
+        icon.classList.add('fa-angle-down')
     }
 }
 
-function popUpAction(event, dropdown, icon, className) {
-    if (!event.target.matches(className)) {
+// hides the menu if the hide-dropdown class isnt present and changes the arrow from up to down
+function menuHide(menu, icon) {
 
-        if (dropdown.classList.contains('show-dropdown')) {
-            dropdown.classList.remove('show-dropdown')
-            dropdown.classList.add('hide-dropdown')
-        }
+    if (!menu.classList.contains('hide-dropdown')) {
+        menu.classList.add('hide-dropdown')
+    }
 
-        if (icon.classList.contains('fa-angle-up')) {
-            icon.classList.remove('fa-angle-up')
-            icon.classList.add('fa-angle-down')
-        }
+    if (icon.classList.contains('fa-angle-up')) {
+        icon.classList.remove('fa-angle-up')
+        icon.classList.add('fa-angle-down')
     }
 }
-
-

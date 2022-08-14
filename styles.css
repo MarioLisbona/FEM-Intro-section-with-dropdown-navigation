@@ -209,10 +209,6 @@ body {
     width: 75%;
 }
 
-.show-dropdown {
-    display: block;
-}
-
 .hide-dropdown {
     display: none;
 }
@@ -232,6 +228,11 @@ button:hover,
     color: var(--almost-black);
     outline: 1px solid var(--almost-black);
     background-color: var(--almost-white);
+}
+
+.features-icon,
+.company-icon {
+    cursor: default
 }
 
 
